@@ -4,13 +4,10 @@ public class Circle extends Shape {
         super(width);
     }
     void draw() {
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < width; j++) {
-                if (Math.pow(i - width / 2, 2) + Math.pow(j - width / 2, 2) <= Math.pow(width / 2, 2)) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
+        for (int i = -width; i <= width; i++) {
+            for (int j = -width; j <= width; j++) {
+                if (i*i + j*j <= width*width) System.out.print("# ");
+                else System.out.print(". ");
             }
             System.out.println();
         }
