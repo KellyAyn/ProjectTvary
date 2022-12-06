@@ -21,4 +21,12 @@ public class Circle extends Shape {
     double getPerimeter() {
         return 2 * Math.PI * width;
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "width=" + width +
+                ", height=" + height +
+                '}';
+    }
 }
